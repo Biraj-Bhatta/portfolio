@@ -19,10 +19,12 @@
     --padding-big: 30px;
 
 
+    --bg-color: #000000;
+    --bg-flex:#181818;
 
-    --bg-color: #E2E8F0;
+    /* --bg-color: #E2E8F0; */
     /* --bg-color: #f67ed0; */
-    --bg-flex:#020617;
+    /* --bg-flex:#020617; */
 
     --card-bg: rgba(20, 16, 24, 0.7);
     --border: #ffffff;
@@ -752,16 +754,6 @@ Hero Section
 
 }
 
-.project-card.active {
-    opacity: 1;
-    transform: translateY(-5px);
-    border-color: var(--border);
-    box-shadow:
-        0 0 2px #7df9ff,
-        0 0 10px rgba(125,249,255,0.5),
-        0 0 25px rgba(125,249,255,0.3);
-}
-
 
 @media (hover: hover) and (pointer: fine) {
     .project-card:hover {
@@ -841,6 +833,20 @@ Hero Section
 
 
 @media screen and (max-width: 768px) {
+
+        .project-card{
+        opacity: 1;
+        transform: translateY(-5px);
+        border-color: var(--border);
+
+        box-shadow:
+            0 0 2px #7df9ff,
+            0 0 10px rgba(125,249,255,0.5),
+            0 0 25px rgba(125,249,255,0.3);
+
+
+    }
+
     .project-overlay {
         opacity: 0;
         pointer-events: none;
@@ -852,3 +858,5 @@ Hero Section
         pointer-events: auto;
     }
 }
+
+
