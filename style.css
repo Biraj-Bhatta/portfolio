@@ -650,30 +650,108 @@ Hero Section
     width:100%;
 }
 
-.skills-row1{
-    width;100%;
+.skills-row1,.skills-row2{
+    width:100%;
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    justify-content:space-evenly;
+    gap:30px;
 
-    padding:30px;
+    padding:15px;
 }
 
-.language,.tools,.framework{
+.language,.tools,.framework,.cloudplatforms,.specilization,.data-and-tools{
     border-radius: 10px;
     border:2px solid var(--border);
     padding:30px;
     flex:1;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills-row2{
-    width;100%;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    padding:30px;
+.language:active,.tools:active,.framework:active,.cloudplatforms:active,.specilization:active,.data-and-tools:active{
+    box-shadow:
+        0 0 2px #7df9ff,
+        0 0 10px rgba(125,249,255,0.5),
+        0 0 25px rgba(125,249,255,0.3);
 }
 
+.language:hover,.tools:hover,.framework:hover,.cloudplatforms:hover,.specilization:hover,.data-and-tools:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow:
+        0 0 2px #7df9ff,
+        0 0 10px rgba(125,249,255,0.5),
+        0 0 25px rgba(125,249,255,0.3);
+}
+
+
+
+.language h3,.tools h3,.framework h3,.cloudplatforms h3,.specilization h3,.data-and-tools h3{
+    color:var(--accent-cyan);
+    padding:var(--padding-small);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.language ul li,
+.tools ul li,
+.framework ul li,
+.cloudplatforms ul li,
+.specilization ul li,
+.data-and-tools ul li {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.language h3:hover,
+.tools h3:hover,
+.framework h3:hover,
+.cloudplatforms h3:hover,
+.specilization h3:hover,
+.data-and-tools h3:hover,
+.language ul li:hover,
+.tools ul li:hover,
+.framework ul li:hover,
+.cloudplatforms ul li:hover,
+.specilization ul li:hover,
+.data-and-tools ul li:hover {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+    transform: translateX(10px); /* shifts on X-axis */
+    cursor: pointer;
+}
+
+.language ul li,
+.tools ul li,
+.framework ul li,
+.cloudplatforms ul li,
+.specilization ul li,
+.data-and-tools ul li {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.language ul li:hover,
+.tools ul li:hover,
+.framework ul li:hover,
+.cloudplatforms ul li:hover,
+.specilization ul li:hover,
+.data-and-tools ul li:hover {
+    color: #ff6600;
+    text-decoration: underline;
+    transform: translateX(10px); /* shifts on X-axis */
+}
+
+/* Click animation */
+.language ul li:active,
+.tools ul li:active,
+.framework ul li:active,
+.cloudplatforms ul li:active,
+.specilization ul li:active,
+.data-and-tools ul li:active {
+    transform: translateX(20px);
+}
 
 /*==========projects section=========*/
 
@@ -694,7 +772,8 @@ Hero Section
 
 .projects-wrapper{
     display:flex;
-    padding:var(--padding-big);
+    padding:var(--padding-small);
+    margin-bottom:20px;
     width: 100%;
     align-items:center;
     justify-content: center;
