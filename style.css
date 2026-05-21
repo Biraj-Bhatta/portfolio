@@ -35,7 +35,9 @@
     --font-sans: 'Inter', sans-serif;
     --font-serif: 'Playfair Display', serif;
 }
-html{
+html,body,main{
+    width:100%;
+    max-width:100%;
     scroll-behavior:smooth;
     overflow-x:clip;
     margin:0;
@@ -45,8 +47,6 @@ section {
 }
 
 body {
-    overflow-x:clip;
-    margin:0;
 
     background-color: var(--bg-color);
     color: var(--text-main);
@@ -692,6 +692,7 @@ Hero Section
 
 .projects-wrapper{
     display:flex;
+    padding:var(--padding-big);
     width: 100%;
     align-items:center;
     justify-content: center;
@@ -732,8 +733,7 @@ Hero Section
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    padding:var(--padding-big);
-    gap:var(--padding-big);
+    gap:var(--padding-big); /*30px */
 }
 
 
@@ -742,83 +742,92 @@ Hero Section
 /* Project Card */
 
 
-.project-card {
-    display:flex;
-    flex-direction:column;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    transition: transform var(--transition-base);
-    padding: var(--padding-small);
+    .project-card {
+        display:flex;
+        flex-direction:column;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        transition: transform var(--transition-base);
+        padding: var(--padding-small);
 
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--border);
+
+        box-shadow:
+            0 0 2px #7df9ff,
+            0 0 10px rgba(125,249,255,0.5),
+            0 0 25px rgba(125,249,255,0.3);
+
+    }
+
+    .project-image {
+        position: relative;
+        background: #000;
+
+    }
+
+    .project-image img {
+        width:100%;
+        aspect-ratio:1/1;
+    }
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        backdrop-filter: blur(5px);
+        background: rgba(11, 15, 25, 0.9);
+        transition: opacity var(--transition-base);
+    }
+
+    /* Trigger overlay on hover */
+    .project-card:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-link {
+        padding: 20px;
+        background: transparent;
+        border: 2px solid var(--border);
+        color: var(--accent-cyan);
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: var(--transition-fast);
+    }
+
+    .project-link:hover {
+        background: var(--accent-cyan-blur);
+        backdrop-filter: blur(10px);
+        color: white;
+        box-shadow: var(--shadow-glow);
+    }
+
+    .project-content {
+        padding: var(--spacing-md);
+        backdrop-filter: blur(10px);
+    }
+
+    .project-content h3 {
+        color: var(--accent-cyan);
+    }
+    .project-content p{
+    max-width:300px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border);
-
-    box-shadow:
-        0 0 2px #7df9ff,
-        0 0 10px rgba(125,249,255,0.5),
-        0 0 25px rgba(125,249,255,0.3);
-
-}
-
-.project-image {
-    position: relative;
-    background: #000;
-
-}
-
-.project-image img {
-
-    aspect-ratio:1/1;
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    backdrop-filter: blur(5px);
-    background: rgba(11, 15, 25, 0.9);
-    transition: opacity var(--transition-base);
-}
-
-/* Trigger overlay on hover */
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-link {
-    padding: 20px;
-    background: transparent;
-    border: 2px solid var(--border);
-    color: var(--accent-cyan);
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: var(--transition-fast);
-}
-
-.project-link:hover {
-    background: var(--accent-cyan-blur);
-    backdrop-filter: blur(10px);
-    color: white;
-    box-shadow: var(--shadow-glow);
-}
-
-.project-content {
-    padding: var(--spacing-md);
-    backdrop-filter: blur(10px);
-}
-
-.project-content h3 {
-    color: var(--accent-cyan);
-}
-
-
+/**/
+/* @media screen and (max-width: 768px) { */
+/*     .project-image img { */
+/*         width:100%; */
+/*         aspect-ratio:1/1; */
+/*     } */
+/* } */
