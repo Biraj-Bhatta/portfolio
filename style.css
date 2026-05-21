@@ -37,7 +37,7 @@
 }
 html{
     scroll-behavior:smooth;
-    overflow-x:hidden;
+    overflow-x:clip;
     margin:0;
 }
 section {
@@ -45,7 +45,7 @@ section {
 }
 
 body {
-    overflow-x:hidden;
+    overflow-x:clip;
     margin:0;
 
     background-color: var(--bg-color);
