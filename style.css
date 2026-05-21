@@ -37,12 +37,17 @@
 }
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
+    margin:0;
 }
 section {
     scroll-margin-top:60px;
 }
 
 body {
+    overflow-x:hidden;
+    margin:0;
+
     background-color: var(--bg-color);
     color: var(--text-main);
     font-family: var(--font-sans);
