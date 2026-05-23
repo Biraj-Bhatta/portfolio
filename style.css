@@ -669,7 +669,7 @@ Hero Section
 /* =======================================================================Skills-Section================================================================== */
 
 .skills-section{
-    backgroun-color:var(--bg-flex);
+    background-color:var(--bg-flex);
     display:flex;
     flex-direction:column;
 
