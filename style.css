@@ -14,10 +14,10 @@
     --transition-fast: 150ms ease-in-out;
 
 
-    --padding-small: 10px;
-    --padding-medium: 20px;
-    --padding-big: 30px;
-
+    --padding-small: 1rem;
+    --padding-medium: 2rem;
+    --padding-big: 3rem;
+    --padding-very-big: 5rem;
 
     --bg-color: #000000;
     --bg-flex:#181818;
@@ -26,7 +26,9 @@
     /* --bg-color: #f67ed0; */
     /* --bg-flex:#020617; */
 
+    --card-bg-white:white;
     --card-bg: rgba(20, 16, 24, 0.7);
+    --border-negative:#000000;
     --border: #ffffff;
     --neon-glow: rgba(219, 39, 119, 0.25);
     --accent-cyan: #00f2fe;
@@ -590,11 +592,63 @@ Hero Section
 
 }
 
-/*==========skills section=========*/
+/* ====================================================================About-section================================================================= */
+.about-section{
+    font-family:Roboto;
+
+
+    background-color:var(--bg-flex);
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content: center;
+
+    width:100%;
+    border-radius:10px;
+    border: 2px solid var(--border);
+    padding: 6rem;
+}
+
+.wrapper-about{
+    background-color:var(--card-bg-white);
+    color:black;
+
+
+    width:100%;
+    height:100%;
+    display:flex;
+    border-radius:10px;
+    border: 2px solid var(--border-negative);
+    padding:var(--padding-medium);
+}
+.about-left{
+    display:flex;
+    flex:0 0 30%;
+}
+.about-title{
+    font-size: clamp(2rem, 5vw, 6rem);
+    display:flex;
+    padding:var(--padding-big);
+}
+
+.about-right{
+    display:flex;
+}
+
+.about-text{
+    flex:1;
+    font-size:24px;
+    padding:var(--padding-small);
+}
+.awards-achievements{
+    flex:1;
+}
+
+/* =======================================================================Skills-Section================================================================== */
 
 .skills-section{
     background-color:var(--bg-flex);
-    margin-top:4px;
     display:flex;
     flex-direction:column;
 
