@@ -13,11 +13,13 @@
     --transition-base: 300ms ease-in-out;
     --transition-fast: 150ms ease-in-out;
 
-
+    --padding-bio:1rem,1rem,1rem,0;
     --padding-small: 1rem;
     --padding-medium: 2rem;
     --padding-big: 3rem;
     --padding-very-big: 5rem;
+
+    --gap:2rem;
 
     --bg-color: #000000;
     --bg-flex:#181818;
@@ -618,13 +620,18 @@ Hero Section
     width:100%;
     height:100%;
     display:flex;
+    flex-direction:column;
     border-radius:10px;
     border: 2px solid var(--border-negative);
     padding:var(--padding-medium);
 }
+.about-main{
+    display:flex;
+}
 .about-left{
     display:flex;
     flex:0 0 30%;
+    padding:var(--padding-medium);
 }
 .about-title{
     font-size: clamp(2rem, 5vw, 6rem);
@@ -634,21 +641,35 @@ Hero Section
 
 .about-right{
     display:flex;
+    padding:var(--padding-medium);
+    gap:var(--gap);
+
+}
+.bio p{
+    padding:var(--padding-bio);
+    font-weight:bold;
 }
 
 .about-text{
-    flex:1;
     font-size:24px;
     padding:var(--padding-small);
 }
 .awards-achievements{
-    flex:1;
+    font-size:24px;
+    padding:var(--padding-small);
+}
+.achievement p{
+    padding:var(--padding-bio);
+    font-weight:bold;
+}
+.about-footer{
+    display:flex;
 }
 
 /* =======================================================================Skills-Section================================================================== */
 
 .skills-section{
-    background-color:var(--bg-flex);
+    backgroun-color:var(--bg-flex);
     display:flex;
     flex-direction:column;
 
