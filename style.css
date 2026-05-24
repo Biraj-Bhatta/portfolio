@@ -28,6 +28,8 @@
     /* --bg-color: #f67ed0; */
     /* --bg-flex:#020617; */
 
+    --bg-logo:#black;
+
     --bg-about:#ffffff;
 
     --card-bg-white:#ffffff;
@@ -160,11 +162,12 @@ main{
         gap: 30px;
     }
 
-    .profile-avatar {
+    
+    .profile-avatar ,.logo{
         width: 45px;
         height: 45px;
-        background-color: #e2e8f0;
-        border-radius: 50%;
+        background-color:var(--bg-logo);
+        border-radius:50%;
     }
 
     .divider {

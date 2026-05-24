@@ -3,6 +3,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biraj Bhatta</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+        <link rel="manifest" href="src/favicon/site.webmanifest">
+
         <link rel="stylesheet" href="style.css">
         <link rel="preload" as="image" href="src/imgages/main.png">
         <script src="script.js" defer></script>
@@ -13,7 +19,11 @@
 
         <nav class="navbar">
             <div class="nav-left">
-                <div class="profile-avatar"></div>
+                <div class="profile-avatar">
+                    <a href="#" onclick="scrollTopReload(); return false;">
+                        <img src="src/logo/logo.svg" alt="Logo" class="logo">
+                    </a>
+                </div>
                 <span class="divider">/</span>
                 <div class="nav-links">
                     <a href="#home" class="active">Home</a>

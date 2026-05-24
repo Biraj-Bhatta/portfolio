@@ -41,3 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+function scrollTopReload() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  setTimeout(() => {
+    location.reload();
+  }, 500);
+}
