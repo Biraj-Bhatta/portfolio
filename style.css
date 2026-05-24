@@ -28,9 +28,11 @@
     /* --bg-color: #f67ed0; */
     /* --bg-flex:#020617; */
 
-    --card-bg-white:white;
+    --bg-about:#ffffff;
+
+    --card-bg-white:#ffffff;
     --card-bg: rgba(20, 16, 24, 0.7);
-    --border-negative:#000000;
+    --border-negative:#d2d5db;
     --border: #ffffff;
     --neon-glow: rgba(219, 39, 119, 0.25);
     --accent-cyan: #00f2fe;
@@ -595,11 +597,13 @@ Hero Section
 }
 
 /* ====================================================================About-section================================================================= */
+
+
 .about-section{
     font-family:Roboto;
 
+    background-color:var(--bg-about);
 
-    background-color:var(--bg-flex);
     display:flex;
     flex-direction:column;
 
@@ -609,62 +613,147 @@ Hero Section
     width:100%;
     border-radius:10px;
     border: 2px solid var(--border);
-    padding: 6rem;
 }
 
-.wrapper-about{
-    background-color:var(--card-bg-white);
-    color:black;
-
-
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    border-radius:10px;
-    border: 2px solid var(--border-negative);
-    padding:var(--padding-medium);
-}
-.about-main{
-    display:flex;
-}
-.about-left{
-    display:flex;
-    flex:0 0 30%;
-    padding:var(--padding-medium);
-}
-.about-title{
-    font-size: clamp(2rem, 5vw, 6rem);
-    display:flex;
-    padding:var(--padding-big);
+.wrapper-about hr{
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    border: none;
 }
 
-.about-right{
-    display:flex;
-    padding:var(--padding-medium);
-    gap:var(--gap);
+/* For PC and LAPTOPS */
+@media screen and (min-width: 768px) {
+
+    .about-section{
+        background-color:var(--bg-flex);
+        padding: 6rem;
+    }
+
+    .wrapper-about{
+        background-color:var(--bg-about);
+        color:black;
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        border-radius:10px;
+        padding:var(--padding-big);
+    }
+    .about-main{
+        display:flex;
+    }
+    .about-left{
+        display:flex;
+        flex:0 0 30%;
+        padding:var(--padding-medium);
+    }
+    .about-title{
+        font-size: clamp(2rem, 5vw, 6rem);
+        display:flex;
+        padding:var(--padding-big);
+    }
+
+    .about-right{
+        display:flex;
+        padding:var(--padding-medium);
+        gap:var(--gap);
+
+    }
+    .bio p{
+        padding:var(--padding-bio);
+        font-weight:bold;
+    }
+
+    .about-text{
+        font-size:24px;
+        padding:var(--padding-small);
+    }
+    .awards-achievements{
+        font-size:24px;
+        padding:var(--padding-small);
+    }
+    .achievement p{
+        padding:var(--padding-bio);
+        font-weight:bold;
+    }
+    .about-footer{
+        display:flex;
+    }
+
+    .marquee {
+        padding: var(--padding-small);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .track {
+        display: flex;
+        width: max-content;
+        gap: 2rem;
+        animation: marquee 12s linear infinite;
+    }
+
+    .track p {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+    }
+}
+
+/* For Mobile */
+@media screen and (max-width: 768px) {
+
+    .about-section{
+        padding:var(--padding-small);
+        border: 2px solid var(--border);
+
+    }
+    .about-wrapper{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        border-radius:10px;
+        padding:var(--padding-medium);
+    }
+    .about-left{
+        font-size:24px;
+        font-weight:bold;
+    }
+     
+    .about-main{
+        color:black;
+    }
+    .bio{
+        font-size:18px;
+        font-weight:bold;
+        padding:1rem 1rem 1rem 0;
+    }
+    .bio-text{
+        text-align:left;
+    }
+.wrapper-about hr{
+        margin-top:4px;
+    }
+
+    .awards-achievements,.marquee{
+        display:none;
+    }
 
 }
-.bio p{
-    padding:var(--padding-bio);
-    font-weight:bold;
-}
 
-.about-text{
-    font-size:24px;
-    padding:var(--padding-small);
-}
-.awards-achievements{
-    font-size:24px;
-    padding:var(--padding-small);
-}
-.achievement p{
-    padding:var(--padding-bio);
-    font-weight:bold;
-}
-.about-footer{
-    display:flex;
-}
+
 
 /* =======================================================================Skills-Section================================================================== */
 
