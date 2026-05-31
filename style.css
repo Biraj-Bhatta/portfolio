@@ -752,7 +752,7 @@ Hero Section
         text-align:left;
     }
 .wrapper-about hr{
-        margin-top:4px;
+        display:none;
     }
 
     .awards-achievements,.marquee{
