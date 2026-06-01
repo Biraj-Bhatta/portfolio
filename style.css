@@ -1110,4 +1110,23 @@ Hero Section
     }
 }
 
+/* =====================================================Contact-Section================================================================== */
+
+
+.contact-section{
+    background-color:var(--bg-flex);
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content: center;
+
+    width:100%;
+    border-radius:10px;
+    border: 2px solid var(--border);
+    padding: 20px 30px;
+}
+.contact-card-wrapper{
+    padding:var(--padding-big);
+}
 
