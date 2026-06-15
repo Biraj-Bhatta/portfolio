@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preload" as="image" href="src/imgages/main.png">
         <script src="script.js" defer></script>
+        <!-- <script src="https://web3forms.com/client/script.js" async defer></script> -->
     </head>
     <body>
 
@@ -112,8 +113,8 @@
                         <div class="marquee">
                             <div class="track">
 
-                                <p>• Currently seeking Frontend Internship  • Open to opportunities     • Passionate about building real-world projects </p>
-                                <p>• Currently seeking Frontend Internship  • Open to opportunities     • Passionate about building real-world projects </p>
+                                <p>• Currently seeking Frontend Internship  • Open for opportunities     • Passionate about building real-world projects </p>
+                                <p>• Currently seeking Frontend Internship  • Open for opportunities     • Passionate about building real-world projects </p>
 
                             </div>
                         </div>
@@ -327,11 +328,72 @@
 
                 <div class="contact-wrapper"><h1 class="title">Connect and Work Together</h1></div>
                 <div class="contact-card-wrapper">
-                        <p>Comming Soon.........</p>
-                </div>
 
+
+
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+                            <input type="hidden" name="access_key" value="3c880ec0-b25f-4bc6-8fb1-ef1c8b909c83">
+
+
+
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project inquiry" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..." ></textarea>
+                            </div>
+
+                            <!-- <div class="h-captcha" data-sitekey="YOUR_SITE_KEY" data-theme="dark" data-size="compact" data-lang="de"></div> -->
+
+                            <button type="submit" class="btn-btn-primary">Send Message</button>
+                        </form>
+
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <a href="mailto:sbirajbhatta@gmail.com">sbirajbhatta@gmail.com</a>
+                            </div>
+
+                            <div class="contact-item">
+                                <h4>Languages</h4>
+                                <p>English , Hindi , Nepali</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Location</h4>
+                                <p>Kathmandu,Nepal</p>
+                            </div>
+                            <div class="contact-links">
+                                <h4>Social Links</h4>
+                                <div class="social-icons">
+                                    <a href="https://github.com/Biraj-Bhatta" aria-label="GitHub" title="GitHub">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/Biraj-Bhatta" aria-label="Linkedin" title="Linkedin">Linkedin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+
+            <div class="footer">
+                <p>© 2026 Biraj Bhatta. All rights reserved. | Web Developer</p>
+            </div>
+            
+
 
         </main>
     </body>
