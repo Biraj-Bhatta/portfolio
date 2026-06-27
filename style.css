@@ -1036,6 +1036,7 @@ Hero Section
 
 .project-image {
     width: 100%;
+    margin-bottom: 10px;
     aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
@@ -1089,27 +1090,22 @@ Hero Section
     max-width:300px;
 }
 .project-deployment{
-    padding:5px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    padding:var(--padding-very-small);
 }
-.project-deployment button{
-    width:100%;
-    padding:5px;
-    background:var(--accent-cyan-blur);
-    border-radius:10px;
-    border:2px solid var(--border);
+.project-deployment a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    background: var(--accent-cyan-blur);
+    border-radius: 10px;
+    border: 2px solid var(--border);
     box-shadow: var(--shadow-glow);
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
 }
-.project-deployment button a{
-    font-weight:600;
-    text-decoration:none;
-    color:white;
-}
-
-
-
 
 @media screen and (max-width: 768px) {
 
