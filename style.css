@@ -996,16 +996,22 @@ Hero Section
 
 /* Project Card */
 
-
 .project-card {
-    display:flex;
-    flex-direction:column;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    transition: transform var(--transition-base);
-    padding: var(--padding-small);
-
+    flex: 1 1 350px;
+    max-width: 400px;
+    border:2px solid var(--border);
+    border-radius:10px;
+    padding:var(--padding-very-small);
 }
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height:100%;
+}
+
+
 
 
 @media (hover: hover) and (pointer: fine) {
@@ -1018,21 +1024,24 @@ Hero Section
             0 0 2px #7df9ff,
             0 0 10px rgba(125,249,255,0.5),
             0 0 25px rgba(125,249,255,0.3);
-
-
     }
 }
 
-.project-image {
-    position: relative;
-    background: #000;
-
-}
-
 .project-image img {
-    width:100%;
-    aspect-ratio:1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 
 .project-overlay {
     position: absolute;
@@ -1073,16 +1082,33 @@ Hero Section
 }
 
 .project-content {
-    padding: var(--spacing-md);
-    backdrop-filter: blur(10px);
+    flex-grow: 1;
 }
 
-.project-content h3 {
-    color: var(--accent-cyan);
-}
 .project-content p{
     max-width:300px;
 }
+.project-deployment{
+    padding:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.project-deployment button{
+    width:100%;
+    padding:5px;
+    background:var(--accent-cyan-blur);
+    border-radius:10px;
+    border:2px solid var(--border);
+    box-shadow: var(--shadow-glow);
+}
+.project-deployment button a{
+    font-weight:600;
+    text-decoration:none;
+    color:white;
+}
+
+
 
 
 @media screen and (max-width: 768px) {
